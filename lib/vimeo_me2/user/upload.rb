@@ -53,7 +53,7 @@ module VimeoMe2
         # start the pull upload
         def start_pull_upload link
           body = {type: 'pull', link: link}
-          post('/videos', body:body)
+          post('/videos?fields=uri,complete_uri,ticket_id,upload_link_secure', body:body)
         end
 
         # start the upload
